@@ -6,10 +6,10 @@ export default function Home() {
   const [hash, setHash] = useState("");
 
   const sendOTP = async () => {
-    const response = await fetch("/api/sendOTP", {
+    const response = await fetch("http://localhost:3001/api/sendOTP", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone: "+91" + phone }),
+      body: JSON.stringify({ phone:  phone }),
     });
     const data = await response.json();
     setHash(data.hash);
