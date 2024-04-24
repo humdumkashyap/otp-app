@@ -41,8 +41,8 @@ export default function Home() {
       setTtl((prevTtl) => {
         if (prevTtl <= 0) {
           clearInterval(interval);
-          alert("Timer expired. Please retry again.");
           setOtp("");
+          alert("Timer expired. Please retry again.");
           setOtpSent(false);
 
           return 0;
