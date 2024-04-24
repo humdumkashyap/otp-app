@@ -14,7 +14,7 @@ export default async function handler(
   if (req.method === "POST") {
     const phone = req.body.phone;
     const otp = Math.floor(100000 + Math.random() * 900000);
-    const ttl = 2 * 60 * 1000; // 2 Minutes in MilliSeconds
+    const ttl = 2 * 60 * 1000;
     const expires = Date.now() + ttl;
     const data = `${phone}.${otp}.${expires}`;
 
